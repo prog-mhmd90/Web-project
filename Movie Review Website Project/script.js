@@ -17,23 +17,17 @@ const movies = [
   { title: "Harry Potter and the Sorcerer's Stone", year: 2001, genre: "Fantasy" },
   { title: "The Dark Knight", year: 2008, genre: "Action" },
   { title: "Inception", year: 2010, genre: "Sci-Fi" },
-  { title: "Joker", year: 2019, genre: "Drama" }
 ];
 
-function showMovies(list) {
-  let container = document.getElementById("movieContainer");
-  container.innerHTML = "";
+var container = document.getElementById("movieContainer");
+container.innerHTML = "";
 
-  for (let i = 0; i < list.length; i++) {
-    container.innerHTML += `
-      <div class="movie">
-        <h3>${list[i].title}</h3>
-        <p>${list[i].genre} - ${list[i].year}</p>
-      </div>
-    `;
-  }
+for (var i = 0; i < movies.length; i++) {
+  var movieHTML = "<div class='movie'>" +
+                  "<h3>" + movies[i].title + "</h3>" +
+                  "<p>" + movies[i].genre + " - " + movies[i].year + "</p>" +
+                  "</div>";
+
+ 
+  container.innerHTML = container.innerHTML + movieHTML;
 }
-
-window.onload = function() {
-  showMovies(movies);
-};
