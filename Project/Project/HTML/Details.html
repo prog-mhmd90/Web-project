@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/CSS/Details.css" />
+    <link rel="stylesheet" href="/Project/CSS/Home.css">
+  </head>
+  <body>
+    <header id="header">
+        <a class="links" href="/Project/HTML/Home.html">
+          <h1 class="website_nm">RateFlix</h1>
+        </a>
+        <div class="header_items">
+          <a class="links" href="/Project/HTML/Home.html">
+            <h1 class="button">Home</h1>
+          </a>
+          <a class="links" href="/Project/HTML/MoviesList.html">
+            <h1 class="button">Movies List</h1>
+          </a>
+          <a class="links" href="/Project/HTML/AddMovie.html">
+            <h1 class="button">Add Movies</h1>
+          </a>
+        </div>
+        <div class="right_header">
+          <a href="/Project/HTML/SearchMoives.html">
+            <button class="search_icon""></button>
+          </a>
+          <a href="/Project/HTML/LogIn.html">
+            <button id="login_bt" class="image_box_bt">Log in</button>
+          </a>
+        </div>
+      </header>
+    <div class="container">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+        alt="Inception"
+      />
+
+      <div class="details">
+        <h2>Inception</h2>
+        <div class="info">
+          Genre: Sci-Fi | Year: 2010<br />
+          Director: Christopher Nolan
+        </div>
+
+        <p class="description">
+          A skilled thief, the absolute best in the dangerous art of extraction,
+          steals valuable secrets from deep within the subconscious during the
+          dream state. When offered a chance at redemption, he must perform the
+          impossible — inception — planting an idea into someone’s mind.
+        </p>
+
+        <div class="stars">
+          <input type="radio" id="star5" /><label>&#9733;</label>
+          <input type="radio" id="star4" /><label>&#9733;</label>
+          <input type="radio" id="star3" /><label>&#9733;</label>
+          <input type="radio" id="star2" /><label>&#9733;</label>
+          <input type="radio" id="star1" /><label>&#9733;</label>
+        </div>
+
+        <div class="review-box">
+          <label for="review">Write your review:</label>
+          <textarea
+            id="review"
+            placeholder="Share your thoughts about this movie..."
+          ></textarea>
+          <button class="submit-btn" type="submit">Submit Review</button>
+        </div>
+
+        <a href="/Project/HTML/MoviesList.html" class="back-btn">← Back to Movies</a>
+      </div>
+    </div>
+  </body>
+</html>

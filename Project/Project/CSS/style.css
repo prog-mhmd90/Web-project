@@ -1,0 +1,87 @@
+body {
+  font-family: sans-serif;
+  background-color: #f8f7f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Signika";
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 40px;
+  width: 400px;
+  border-radius: 6px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: "Signika";
+}
+
+.input-box {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  font-family: "Signika";
+}
+
+.checkbox-group {
+  align-items: center;
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: "Signika";
+}
+
+.checkbox {
+  margin-right: 5px;
+}
+
+.btn {
+  background-color: #eddd5e;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Signika";
+}
+
+.btn:hover {
+  background-color: #bdac43 !important;
+}
+
+.link {
+  color: #064588;
+  text-decoration: none;
+  font-family: "Signika";
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Signika";
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Movies</title>
+    <link rel="stylesheet" href="/Project/CSS/EditMoive.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/Project/CSS/Home.css">
+  </head>
+  <body>
+        <header id="header">
+        <a class="links" href="/Project/HTML/Home.html">
+          <h1 class="website_nm">RateFlix</h1>
+        </a>
+        <div class="header_items">
+          <a class="links" href="/Project/HTML/Home.html">
+            <h1 class="button">Home</h1>
+          </a>
+          <a class="links" href="/Project/HTML/MoviesList.html">
+            <h1 class="button">Movies List</h1>
+          </a>
+          <a class="links" href="/Project/HTML/AddMovie.html">
+            <h1 class="button">Add Movies</h1>
+          </a>
+        </div>
+        <div class="right_header">
+          <a href="/Project/HTML/SearchMoives.html">
+            <button class="search_icon""></button>
+          </a>
+          <a href="/Project/HTML/LogIn.html">
+            <button id="login_bt" class="image_box_bt">Log in</button>
+          </a>
+        </div>
+      </header>
+    <h1>Manage Movies</h1>
+
+    <div class="container">
+      <table class="movie-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Inception</td>
+            <td>Sci-Fi</td>
+            <td>2010</td>
+            <td>Christopher Nolan</td>
+            <td>
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
