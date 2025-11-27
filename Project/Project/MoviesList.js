@@ -1,6 +1,5 @@
-
-//الأفلام
-var movies = [
+// االافلام
+var defaultMovies = [
     { 
         id: 1, 
         title: "Inception", 
@@ -183,12 +182,25 @@ var movies = [
     }
 ];
 
-// مسح لو في بيانات قديمه واضافة الجديده
-localStorage.removeItem("movies");
-localStorage.setItem("movies", JSON.stringify(movies));
-
-// عرض الأفلام
 window.onload = function() {
+    loadMovies();
+};
+
+function loadMovies() {
+    var savedMovies = localStorage.getItem("movies");
+    var movies;
+    
+    if (savedMovies === null) {
+        movies = defaultMovies;
+        localStorage.setItem("movies", JSON.stringify(movies));
+    } else {
+        movies = JSON.parse(savedMovies);
+    }
+    
+    displayMovies(movies);
+}
+
+function displayMovies(movies) {
     var container = document.querySelector('.movies-container');
     if (!container) {
         console.log("Container not found!");
@@ -197,18 +209,30 @@ window.onload = function() {
     
     container.innerHTML = '';
     
+    if (!movies || movies.length === 0) {
+        container.innerHTML = '<p>No movies found.</p>';
+        return;
+    }
+    
+    // لعرض الافلام كلها
     for (var i = 0; i < movies.length; i++) {
         var movie = movies[i];
-        var card = '<div class="card">';
-        card += '<img src="' + movie.image + '" alt="' + movie.title + '">';
-        card += '<h3>' + movie.title + '</h3>';
-        card += '<p>' + movie.genre + ' • ' + movie.year + '<br>Director: ' + movie.director + '</p>';
-        card += '<br>';
-        card += '<a href="/HTML/Details.html?id=' + movie.id + '" class="details-btn">Details</a>';
-        card += '</div>';
-        
-        container.innerHTML += card;
+        var movieCard = createMovieCard(movie);
+        container.innerHTML += movieCard;
     }
     
     console.log("Showing " + movies.length + " movies");
-};
+}
+
+// Function لفلم واحد
+function createMovieCard(movie) {
+    var cardHTML = '<div class="card">';
+    cardHTML += '<img src="' + movie.image + '" alt="' + movie.title + '">';
+    cardHTML += '<h3>' + movie.title + '</h3>';
+    cardHTML += '<p>' + movie.genre + ' • ' + movie.year + '<br>Director: ' + movie.director + '</p>';
+    cardHTML += '<br>';
+    cardHTML += '<a href="/HTML/Details.html?id=' + movie.id + '" class="details-btn">Details</a>';
+    cardHTML += '</div>';
+    
+    return cardHTML;
+}
